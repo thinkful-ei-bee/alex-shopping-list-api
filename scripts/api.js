@@ -7,7 +7,7 @@ const api = (function() {
   function listApiFetch(...args) {
     let error;
 
-    fetch(...args)
+    return fetch(...args)
       .then(res => {
         if (!res.ok) {
           error = { code: res.status };
